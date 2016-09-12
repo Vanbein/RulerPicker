@@ -103,9 +103,8 @@
     self.topRulerPicker.delegate = self;
 //    self.topRulerPicker.triangleHeight = 5;
 //    self.topRulerPicker.numberOfSmallUnit = 4;
-    [self.topRulerPicker showTimeRulerView];
+    [self.topRulerPicker show];
     [self.view addSubview:self.topRulerPicker];
-    self.topRulerPicker.tag = kTopRulerPickerTag;
     [self.topRulerPicker mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(unitTitle.mas_bottom).mas_offset(30.0);
         make.width.mas_equalTo(300);
@@ -171,8 +170,7 @@
     self.bottomRoundingRulerPicker.roundingEnabled = YES;
     self.bottomRoundingRulerPicker.rulerValue = @"12:00:00";
     self.bottomRoundingRulerPicker.delegate = self;
-    [self.bottomRoundingRulerPicker showTimeRulerView];
-    self.bottomRoundingRulerPicker.tag = kBottomRulerPickerTag;
+    [self.bottomRoundingRulerPicker show];
 }
 
 #pragma mark - VNBTimeRulerDelegate

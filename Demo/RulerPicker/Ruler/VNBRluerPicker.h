@@ -141,7 +141,7 @@
 /**
  *  显示，必须要先初始化、再设置属性、最后才显示
  */
-- (void)showTimeRulerView;
+- (void)show;
 
 /**
  *  设置 UnitValue 值，并将 rulerView 移到对应的 offest

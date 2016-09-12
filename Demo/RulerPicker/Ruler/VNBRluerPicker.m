@@ -221,7 +221,7 @@
 #pragma mark - Show RulerScrollView Method
 
 
-- (void)showTimeRulerView{
+- (void)show{
     // 配置 rulerScrollView
     _rulerScrollView = [self configureRulerScrollView];
     // 开始绘制刻度线
