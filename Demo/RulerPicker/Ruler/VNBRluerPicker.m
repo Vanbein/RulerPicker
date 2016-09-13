@@ -489,7 +489,7 @@
             UILabel *rule = [[UILabel alloc] init];
             rule.textColor = [UIColor blackColor];
             [rule setFont:[UIFont systemFontOfSize:13.0]];
-            rule.text = [NSString stringWithFormat:@"%02d:00",i/6];
+            rule.text = [NSString stringWithFormat:@"%02d:00",i/_numberOfSmallUnit];
             CGSize textSize = [rule.text sizeWithAttributes:@{ NSFontAttributeName : rule.font }];
             
             // 顶部刻度线
@@ -501,7 +501,7 @@
             CGPathAddLineToPoint(pathRef1, NULL, 0 + _lineSpacing * i, self.rulerHeight - (_linePadTopBottom + _mainLineHeight));
             
             //  中间的时间点 text
-            rule.frame = CGRectMake(0 + _lineSpacing * i - textSize.width / 2, (self.rulerHeight - textSize.height)/2.0, 0, 0);
+            rule.frame = CGRectMake( _lineSpacing * i - textSize.width / 2, (self.rulerHeight - textSize.height)/2.0, 0, 0);
             [rule sizeToFit];
             [self addSubview:rule];
             
